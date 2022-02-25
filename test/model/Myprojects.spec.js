@@ -28,7 +28,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new TempApi.Project();
+    instance = new TempApi.Myprojects();
   });
 
   var getProperty = function(object, getter, property) {
@@ -47,16 +47,22 @@
       object[property] = value;
   }
 
-  describe('Project', function() {
-    it('should create an instance of Project', function() {
-      // uncomment below and update the code to test Project
-      //var instane = new TempApi.Project();
-      //expect(instance).to.be.a(TempApi.Project);
+  describe('Myprojects', function() {
+    it('should create an instance of Myprojects', function() {
+      // uncomment below and update the code to test Myprojects
+      //var instane = new TempApi.Myprojects();
+      //expect(instance).to.be.a(TempApi.Myprojects);
     });
 
     it('should have the property id (base name: "_id")', function() {
       // uncomment below and update the code to test the property id
-      //var instance = new TempApi.Project();
+      //var instance = new TempApi.Myprojects();
+      //expect(instance).to.be();
+    });
+
+    it('should have the property ptitle (base name: "ptitle")', function() {
+      // uncomment below and update the code to test the property ptitle
+      //var instance = new TempApi.Myprojects();
       //expect(instance).to.be();
     });
 

@@ -3,6 +3,9 @@
 .travis.yml
 README.md
 config.js
+docs/Myprojects.md
+docs/MyprojectsApi.json
+docs/MyprojectsApi.md
 docs/Project.md
 docs/ProjectApi.json
 docs/ProjectApi.md
@@ -12,7 +15,9 @@ index.js
 mocha.opts
 package.json
 src/ApiClient.js
+src/api/MyprojectsApi.js
 src/api/ProjectApi.js
 src/index.js
+src/model/Myprojects.js
 src/model/Project.js
 webpack.config.js

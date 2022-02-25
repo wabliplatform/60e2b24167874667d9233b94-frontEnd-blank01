@@ -14,18 +14,19 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The Project model module.
- * @module model/Project
+ * The Myprojects model module.
+ * @module model/Myprojects
  * @version 1.0.0
  */
-class Project {
+class Myprojects {
     /**
-     * Constructs a new <code>Project</code>.
-     * @alias module:model/Project
+     * Constructs a new <code>Myprojects</code>.
+     * @alias module:model/Myprojects
+     * @param ptitle {String} 
      */
-    constructor() { 
+    constructor(ptitle) { 
         
-        Project.initialize(this);
+        Myprojects.initialize(this, ptitle);
     }
 
     /**
@@ -33,22 +34,26 @@ class Project {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj) { 
+    static initialize(obj, ptitle) { 
+        obj['ptitle'] = ptitle;
     }
 
     /**
-     * Constructs a <code>Project</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>Myprojects</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/Project} obj Optional instance to populate.
-     * @return {module:model/Project} The populated <code>Project</code> instance.
+     * @param {module:model/Myprojects} obj Optional instance to populate.
+     * @return {module:model/Myprojects} The populated <code>Myprojects</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new Project();
+            obj = obj || new Myprojects();
 
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
+            }
+            if (data.hasOwnProperty('ptitle')) {
+                obj['ptitle'] = ApiClient.convertToType(data['ptitle'], 'String');
             }
         }
         return obj;
@@ -60,12 +65,17 @@ class Project {
 /**
  * @member {String} _id
  */
-Project.prototype['_id'] = undefined;
+Myprojects.prototype['_id'] = undefined;
+
+/**
+ * @member {String} ptitle
+ */
+Myprojects.prototype['ptitle'] = undefined;
 
 
 
 
 
 
-export default Project;
+export default Myprojects;
 
