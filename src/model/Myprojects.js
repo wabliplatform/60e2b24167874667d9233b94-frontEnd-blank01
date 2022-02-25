@@ -22,11 +22,10 @@ class Myprojects {
     /**
      * Constructs a new <code>Myprojects</code>.
      * @alias module:model/Myprojects
-     * @param ptitle {String} 
      */
-    constructor(ptitle) { 
+    constructor() { 
         
-        Myprojects.initialize(this, ptitle);
+        Myprojects.initialize(this);
     }
 
     /**
@@ -34,8 +33,7 @@ class Myprojects {
      * This method is used by the constructors of any subclasses, in order to implement multiple inheritance (mix-ins).
      * Only for internal use.
      */
-    static initialize(obj, ptitle) { 
-        obj['ptitle'] = ptitle;
+    static initialize(obj) { 
     }
 
     /**
@@ -52,9 +50,6 @@ class Myprojects {
             if (data.hasOwnProperty('_id')) {
                 obj['_id'] = ApiClient.convertToType(data['_id'], 'String');
             }
-            if (data.hasOwnProperty('ptitle')) {
-                obj['ptitle'] = ApiClient.convertToType(data['ptitle'], 'String');
-            }
         }
         return obj;
     }
@@ -66,11 +61,6 @@ class Myprojects {
  * @member {String} _id
  */
 Myprojects.prototype['_id'] = undefined;
-
-/**
- * @member {String} ptitle
- */
-Myprojects.prototype['ptitle'] = undefined;
 
 
 
