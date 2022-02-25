@@ -117,7 +117,17 @@ let apiProjectApi = new TempApi.ProjectApi();import TempApi from '../src/index';
   );const map = new Map();  data.forEach((item,i) => {
     if(subDataElements.length > i)
       {
-        console.log('There are no inside data elements');
+        try { 
+      const insideSubDataElement = subDataElements[i].querySelector("[annotationname = 'pptitle']");
+      if(insideSubDataElement !== null){
+        insideSubDataElement.textContent = data[data.length -i -1].pptitle;
+        
+      }
+      else if(subDataElements[i].getAttribute('annotationname') === 'pptitle'){
+        subDataElements[i].textContent = data[data.length -i -1].pptitle;
+        
+      }
+     } catch (e) { console.log(e) };
         map.set(subDataElements[i].getAttribute('id'), data[data.length-i-1])
         
       }

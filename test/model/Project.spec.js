@@ -60,6 +60,12 @@
       //expect(instance).to.be();
     });
 
+    it('should have the property pptitle (base name: "pptitle")', function() {
+      // uncomment below and update the code to test the property pptitle
+      //var instance = new TempApi.Project();
+      //expect(instance).to.be();
+    });
+
   });
 
 }));

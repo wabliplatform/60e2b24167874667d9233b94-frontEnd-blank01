@@ -6,4 +6,4 @@ let apiMyprojectsApi = new TempApi.MyprojectsApi();import TempApi from '../src/i
     event.preventDefault();
     { window.document.location = '#submenu2';}};document.getElementById('i9m85').onclick = (event) => {
     event.preventDefault();
-    { window.document.location = '#submenu3';}};window.onload = () => {let myprojectsId = window.location.pathname.replace('/view/','');apiMyprojectsApi.getmyprojects( myprojectsId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); document.querySelector('[annotationname = ptitle]').textContent = response.body.query.ptitle ;}});};
+    { window.document.location = '#submenu3';}};window.onload = () => {let myprojectsId = window.location.pathname.replace('/view/','');apiMyprojectsApi.getmyprojects( myprojectsId, (error, data, response) => { if (error) {console.error(error);} else { console.log('API called successfully. Returned data: ' + data); }});};
